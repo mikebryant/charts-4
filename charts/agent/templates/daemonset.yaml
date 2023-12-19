@@ -178,11 +178,13 @@ spec:
           resources:
             {{- include "agent.resources" . | nindent 12 }}
           securityContext:
-            privileged: true
-            runAsNonRoot: false
-            runAsUser: 0
-            readOnlyRootFilesystem: false
-            allowPrivilegeEscalation: true
+            capabilities:
+              drop:
+              - ALL
+              add:
+              - SYS_ADMIN
+              - SYS_RESOURCE
+              - SYS_PTRACE
           env:
             - name: K8S_NODE
               valueFrom:
