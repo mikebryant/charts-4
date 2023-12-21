@@ -185,6 +185,7 @@ spec:
               - SYS_ADMIN
               - SYS_RESOURCE
               - SYS_PTRACE
+              - SYS_CHROOT
           env:
             - name: K8S_NODE
               valueFrom:
