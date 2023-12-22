@@ -3,6 +3,7 @@ apiVersion: apps/v1
 kind: DaemonSet
 metadata:
   name: {{ template "agent.fullname" . }}
+  container.apparmor.security.beta.kubernetes.io/sysdig: unconfined
   namespace: {{ include "agent.namespace" . }}
   labels:
     {{- include "agent.labels" . | nindent 4 }}
