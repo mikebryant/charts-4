@@ -179,6 +179,8 @@ spec:
           resources:
             {{- include "agent.resources" . | nindent 12 }}
           securityContext:
+            seccompProfile:
+              type: Unconfined
             capabilities:
               drop:
               - ALL
