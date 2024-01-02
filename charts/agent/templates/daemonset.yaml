@@ -189,7 +189,7 @@ spec:
               - SYS_RESOURCE
               - SYS_PTRACE
               - SYS_CHROOT
-              - CAP_DAC_READ_SEARCH
+              - DAC_READ_SEARCH
           env:
             - name: K8S_NODE
               valueFrom:
