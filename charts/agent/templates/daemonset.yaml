@@ -15,13 +15,13 @@ spec:
   template:
     metadata:
       name: {{ template "agent.fullname" .}}
-      container.apparmor.security.beta.kubernetes.io/sysdig: unconfined
       labels:
         {{ include "agent.labels" . | nindent 8 }}
         {{ include "agent.daemonsetLabels" . | nindent 8 }}
       {{- if (include "agent.gke.autopilot" .) }}
       annotations:
         autopilot.gke.io/no-connect: "true"
+        container.apparmor.security.beta.kubernetes.io/sysdig: unconfined
       {{- else }}
       {{- if .Values.daemonset.annotations }}
       annotations:
