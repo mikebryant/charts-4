@@ -179,6 +179,7 @@ spec:
             {{- include "agent.resources" . | nindent 12 }}
           securityContext:
             allowPrivilegeEscalation: false
+            runAsNonRoot: true
             seccompProfile:
               type: Unconfined
             capabilities:
