@@ -202,13 +202,13 @@ webhook:
 
   image:
     # The webhook image registry
-    registry: quay.io
+    registry: ghcr.io
     # The webhook image repository
-    repository: sysdig/admission-controller
+    repository: sysdiglabs/admission-controller
     # The PullPolicy for Webhook image
     pullPolicy:
     # Overrides the default image tag. If not specified, it defaults to appVersion in Chart.yaml
-    tag:
+    tag: pr-924
     # Specifies the image digest value.  If set, this value is used instead of the tag value
     digest:
 
