@@ -185,7 +185,8 @@ spec:
               drop:
               - ALL
               add:
-              - SYS_ADMIN
+              - BPF
+              - PERFMON
               - SYS_RESOURCE
               - SYS_PTRACE
               - SYS_CHROOT
