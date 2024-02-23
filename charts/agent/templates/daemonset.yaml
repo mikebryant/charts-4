@@ -195,6 +195,8 @@ spec:
               - SETUID
               - SETGID
           env:
+            - name: ADDITIONAL_CONF
+              value: "app_checks_enabled: false\nmountedfs_reader:\n  enabled: false"
             - name: K8S_NODE
               valueFrom:
                 fieldRef:
