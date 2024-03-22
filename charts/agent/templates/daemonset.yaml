@@ -190,6 +190,7 @@ spec:
               - SYS_PTRACE
               - SYS_CHROOT
               - DAC_READ_SEARCH
+              - KILL
           env:
             - name: K8S_NODE
               valueFrom:
