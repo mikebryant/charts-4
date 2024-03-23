@@ -191,6 +191,7 @@ spec:
               - SYS_CHROOT
               - DAC_READ_SEARCH
               - KILL
+              - SETUID
           env:
             - name: K8S_NODE
               valueFrom:
