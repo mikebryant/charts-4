@@ -192,6 +192,7 @@ spec:
               - DAC_READ_SEARCH
               - KILL
               - SETUID
+              - SETGID
           env:
             - name: K8S_NODE
               valueFrom:
