@@ -170,6 +170,7 @@ tests:
             name: osrel-usr
             hostPath:
               path: /usr/lib/os-release
+              type: File
       - contains:
           path: spec.template.spec.containers[?(@.name == "sysdig")].volumeMounts
           content:
@@ -197,6 +198,7 @@ tests:
             name: osrel
             hostPath:
               path: /etc/os-release
+              type: File
       - contains:
           path: spec.template.spec.volumes
           content:
@@ -228,6 +230,7 @@ tests:
             name: osrel
             hostPath:
               path: /etc/os-release
+              type: File
       - contains:
           path: spec.template.spec.volumes
           content:
